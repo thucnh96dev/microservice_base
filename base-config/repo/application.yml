@@ -29,7 +29,7 @@ spring:
     # As Spring Cloud Ribbon is in maintenance mode.
     # It is recommended switching to BlockingLoadBalancerClient instead.
     loadbalancer.ribbon.enabled: false
-  # Massaging provider configurations
+    # Massaging provider configurations
     stream.kafka.binder:
       brokers: ${app.messaging.kafka.broker}
       defaultBrokerPort: 9092
@@ -72,13 +72,13 @@ management:
     health.show-details: always
 
 logging.level:
-    org:
-      springframework:
-        web: DEBUG
-    web: DEBUG
-    root: INFO
-    com.siriusxi.ms.store: DEBUG
-    com.siriusxi.cloud.infra: DEBUG
+  org:
+    springframework:
+      web: DEBUG
+  web: DEBUG
+  root: INFO
+  com.siriusxi.ms.store: DEBUG
+  com.siriusxi.cloud.infra: DEBUG
 
 # This is a docker specific profile properties
 # Also profiles could be separated in its owen file

@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/thucmvn_uaa
+    username: postgres
+    password: secret
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+    default-property-inclusion: non_null
+
+auth-server:
+  issuer: http://localhost:${server.port}${server.servlet.context-path}
+  access-token:
+    default-format: jwt
+    lifetime: 10m
+  id-token:
+    lifetime: 5m
+  refresh-token:
+    lifetime: 8h
+    max-lifetime: 8h
+
+logging:
+  level:
+    root: INFO
+    com:
+      example:
+        authorizationserver: TRACE
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: INFO
+#    org.springframework.boot.autoconfigure: DEBUG

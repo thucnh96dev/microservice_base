@@ -31,9 +31,9 @@ server:
   port: 9082
 
 logging.level:
-    org:
-      springframework.data.mongodb.core.MongoTemplate: DEBUG
-      mongodb: DEBUG
+  org:
+    springframework.data.mongodb.core.MongoTemplate: DEBUG
+    mongodb: DEBUG
 
 # This is a docker specific profile properties
 # Also profiles could be separated in its owen file

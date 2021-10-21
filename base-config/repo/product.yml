@@ -23,8 +23,8 @@ spring:
       rabbit:
         bindings:
           input.consumer:
-              autoBindDlq: true
-              republishToDlq: true
+            autoBindDlq: true
+            republishToDlq: true
       kafka:
         bindings:
           input.consumer.enableDlq: true
@@ -33,9 +33,9 @@ server:
   port: 9081
 
 logging.level:
-    org:
-      springframework.data.mongodb.core.MongoTemplate: DEBUG
-      mongodb: debug
+  org:
+    springframework.data.mongodb.core.MongoTemplate: DEBUG
+    mongodb: debug
 
 # This is a docker specific profile properties
 # Also profiles could be separated in its owen file

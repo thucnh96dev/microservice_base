@@ -1,0 +1,8 @@
+server:
+  port: 8087
+
+---
+spring:
+  profiles: external-OAuth-Provider
+  security.oauth2.resourceserver:
+    jwt.jwk-set-uri: https://dev-taman.eu.auth0.com/.well-known/jwks.json

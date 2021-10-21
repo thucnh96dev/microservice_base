@@ -2,9 +2,9 @@ server:
   port: 8761
 
 logging.level:
-    com.netflix:
-        eureka: DEBUG
-        discovery: DEBUG
+  com.netflix:
+    eureka: DEBUG
+    discovery: DEBUG
 
 eureka:
   environment: Development
@@ -40,9 +40,9 @@ eureka:
     # - for one registered client: 60 / 3 * 0.5 * 1 = 10.
     # - for two registered clients: 60 / 3 * 0,5 * 2 = 20.
     # As soon as two clients are connected:
-    expected-client-renewal-interval-seconds:  3
+    expected-client-renewal-interval-seconds: 3
 
     # The interval in which the instance eviction task scans for instances with expired leases.
     # Given in milliseconds.
-    eviction-interval-timer-in-ms:  2000
+    eviction-interval-timer-in-ms: 2000
     wait-time-in-ms-when-sync-empty: 0

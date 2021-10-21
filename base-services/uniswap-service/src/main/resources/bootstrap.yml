@@ -7,7 +7,7 @@ CONFIG_SERVER_USR: dev-usr
 CONFIG_SERVER_PWD: dev-pwd
 
 spring:
-  application.name: review
+  application.name: uniswap
   cloud.config:
     fail-fast: true
     retry:

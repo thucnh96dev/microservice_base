@@ -5,14 +5,17 @@
 
 USE `review-db`;
 
-CREATE TABLE `review-db`.`review` (
-    `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `author` VARCHAR(50) DEFAULT NULL,
-    `content` VARCHAR(255) DEFAULT NULL,
+CREATE TABLE `review-db`.`review`
+(
+    `id`         INTEGER NOT NULL AUTO_INCREMENT,
+    `author`     VARCHAR(50)  DEFAULT NULL,
+    `content`    VARCHAR(255) DEFAULT NULL,
     `product_id` INTEGER NOT NULL,
-    `review_id` INTEGER NOT NULL,
-    `subject` VARCHAR(255) DEFAULT NULL,
-    `version` INTEGER NOT NULL,
+    `review_id`  INTEGER NOT NULL,
+    `subject`    VARCHAR(255) DEFAULT NULL,
+    `version`    INTEGER NOT NULL,
     PRIMARY KEY (`id`),
-    UNIQUE KEY `review_unique_idx` (`product_id` , `review_id`)
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
+    UNIQUE KEY `review_unique_idx` (`product_id`, `review_id`)
+) ENGINE = INNODB
+  DEFAULT CHARSET = UTF8MB4
+  COLLATE = UTF8MB4_0900_AI_CI;

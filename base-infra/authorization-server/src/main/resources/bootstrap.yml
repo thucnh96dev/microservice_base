@@ -16,7 +16,16 @@ spring:
     uri: http://${CONFIG_SERVER_USR}:${CONFIG_SERVER_PWD}@${app.config-server.host}:${app.config-server.port}
 
 # security.oauth2.authorizationserver.jwt.enabled: false
-
+auth-server:
+  issuer: http://localhost:${server.port}${server.servlet.context-path}
+  access-token:
+    default-format: jwt
+    lifetime: 10m
+  id-token:
+    lifetime: 5m
+  refresh-token:
+    lifetime: 8h
+    max-lifetime: 8h
 app:
   config-server:
     host: localhost

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## author: Mohamed Taman
+## author: Thucnh
 ## version: v4.5
 echo -e "\nInstalling all Springy store core shared modules & Parent POMs"
 echo -e  "...............................................................\n"
